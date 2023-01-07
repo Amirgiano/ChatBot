@@ -12,7 +12,7 @@ def message_probability(user_message, recognised_words, single_response=False, r
             message_certainty += 1
 
     # Calculates the percent of recognised words in a user message
-    percentage = float(message_certainty) / float(len(recognised_words))
+    percentage = float(message_certainty) / float(len(user_message))
 
     # Checks that the required words are in the string
     for word in required_words:

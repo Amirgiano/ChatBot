@@ -44,7 +44,7 @@ def check_all_messages(message):
     
 
     # Longer responses
-    response(long.R_1, ['mal', 'testa', 'gola infiammata', 'mal di gola','naso chiuso', 'stanchezza', 'febbre', '37', '37.1','37.2', '37.3','37.4','37.5','starnuto','starnutisco','starnutire'], required_words=['starnuto','starnutisco','starnutire'])
+    response(long.R_1, ['mal', 'testa', 'gola infiammata', 'mal di gola','naso chiuso', 'stanchezza', 'febbre', '37', '37.1','37.2', '37.3','37.4','37.5','starnuto','starnutire'], required_words=[])
     response(long.R_2, ['mal', 'testa', 'gola infiammata', 'mal di gola','naso chiuso', 'stanchezza', 'febbre', '37.5', '37.6','37.7', '37.8','37.9','38', 'gusto', 'gusto','gusto','respirare', 'respiratorio', 'respiratorie'], required_words=[])
 
     best_match = max(highest_prob_list, key=highest_prob_list.get)
@@ -63,6 +63,5 @@ def get_response(user_input):
 
 # Testing the response system
 while get_response != "Stop":
-    print('Ciao sono un Bot, raccontami le difficolt\'a che hai cosi cerco di diagnosare se hai il covid o raffreddore')
+    #print('Ciao sono un Bot, raccontami le difficolt\'a che hai cosi cerco di diagnosare se hai il covid o raffreddore')
     print('Bot: ' + get_response(input('Tu: ')))
-    
